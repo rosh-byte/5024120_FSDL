@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examination Hall Ticket</title>
+
+    <style>
+        :root {
+            --primary: #4f46e5;     /* Indigo */
+            --secondary: #06b6d4;   /* Cyan */
+            --bg: #f1f5f9;
+            --card: #ffffff;
+            --text: #1f2937;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hallticket {
+            width: 720px;
+            background: var(--card);
+            border-radius: 16px;
+            padding: 25px 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            color: var(--text);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .title h1 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 26px;
+        }
+
+        .title h3 {
+            margin: 5px 0 0;
+            font-weight: normal;
+            color: #6b7280;
+        }
+
+        .photo {
+            width: 120px;
+            height: 140px;
+            border-radius: 10px;
+            border: 2px dashed var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--primary);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        th {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 10px;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        td {
+            padding: 10px;
+            background: #f8fafc;
+        }
+
+        tr:nth-child(even) td {
+            background: #eef2ff;
+        }
+
+        h3.section-title {
+            margin-top: 25px;
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 10px;
+        }
+
+        /* Signatures */
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .signatures p {
+            text-align: center;
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .line {
+            margin-bottom: 5px;
+            border-top: 1.5px solid #111827;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="hallticket">
+
+    <div class="header">
+        <div class="title">
+            <h1>ABC Institute of Technology</h1>
+            <h3>Examination Hall Ticket</h3>
+        </div>
+        <div class="photo">Photo</div>
+    </div>
+
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <td>Roshwyn Fernandes</td>
+        </tr>
+        <tr>
+            <th>Roll Number</th>
+            <td>5024120</td>
+        </tr>
+        <tr>
+            <th>Course</th>
+            <td>B.tech Information Technology</td>
+        </tr>
+        <tr>
+            <th>Semester</th>
+            <td>Semester IV</td>
+        </tr>
+        <tr>
+            <th>Exam Center</th>
+            <td>ABC College Campus</td>
+        </tr>
+    </table>
+
+    <h3 class="section-title">Exam Schedule</h3>
+
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>Software Engineering</td>
+            <td>12 March 2026</td>
+            <td>10:00 AM – 1:00 PM</td>
+        </tr>
+        <tr>
+            <td>Web Technologies</td>
+            <td>15 March 2026</td>
+            <td>10:00 AM – 1:00 PM</td>
+        </tr>
+    </table>
+
+    <div class="signatures">
+        <p>
+            <span class="line"></span>
+            Student Signature
+        </p>
+        <p>
+            <span class="line"></span>
+            Controller of Examinations
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

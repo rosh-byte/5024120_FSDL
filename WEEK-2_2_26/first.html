@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>This is a sample HTML page</p>
+    </header>
+
+    <main>
+        <h2>About</h2>
+        <p>This page shows basic HTML structure with CSS and JavaScript.</p>
+
+        <button onclick="showMessage()">Click Me</button>
+        <p id="message"></p>
+    </main>
+
+    <!-- Internal JavaScript -->
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText =
+                "Hello! You clicked the button 🚀";
+        }
+    </script>
+
+</body>
+</html>
