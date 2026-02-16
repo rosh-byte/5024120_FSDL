@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examination Hall Ticket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #06b6d4;
+            --card: #ffffff;
+            --text: #1f2937;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hallticket {
+            max-width: 720px;
+            background: var(--card);
+            border-radius: 16px;
+            padding: 25px 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            color: var(--text);
+        }
+
+        .photo {
+            width: 120px;
+            height: 140px;
+            border-radius: 10px;
+            border: 2px dashed var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--primary);
+        }
+
+        h3.section-title {
+            margin-top: 25px;
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 10px;
+        }
+
+        .line {
+            margin-bottom: 5px;
+            border-top: 1.5px solid #111827;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="hallticket mx-auto">
+
+        <!-- Header -->
+        <div class="row align-items-center border-bottom pb-3 mb-4">
+            <div class="col-md-9">
+                <h1 class="fw-bold text-primary mb-1">ABC Institute of Technology</h1>
+                <h5 class="text-muted">Examination Hall Ticket</h5>
+            </div>
+            <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+                <div class="photo ms-md-auto">Photo</div>
+            </div>
+        </div>
+
+        <!-- Student Details -->
+        <table class="table table-bordered table-striped">
+            <tbody>
+                <tr>
+                    <th>Student Name</th>
+                    <td>Roshwyn Fernandes</td>
+                </tr>
+                <tr>
+                    <th>Roll Number</th>
+                    <td>5024120</td>
+                </tr>
+                <tr>
+                    <th>Course</th>
+                    <td>B.Tech Information Technology</td>
+                </tr>
+                <tr>
+                    <th>Semester</th>
+                    <td>Semester IV</td>
+                </tr>
+                <tr>
+                    <th>Exam Center</th>
+                    <td>ABC College Campus</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Exam Schedule -->
+        <h3 class="section-title">Exam Schedule</h3>
+
+        <table class="table table-hover table-bordered mt-3">
+            <thead class="table-primary">
+                <tr>
+                    <th>Subject</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Software Engineering</td>
+                    <td>12 March 2026</td>
+                    <td>10:00 AM – 1:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Web Technologies</td>
+                    <td>15 March 2026</td>
+                    <td>10:00 AM – 1:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Signatures -->
+        <div class="row text-center mt-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="line mx-auto"></div>
+                <p class="small">Student Signature</p>
+            </div>
+            <div class="col-md-6">
+                <div class="line mx-auto"></div>
+                <p class="small">Controller of Examinations</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
