@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Interactive App</title>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container" ng-controller="MainController">
+
+    <h1>🚀 AngularJS Interactive App</h1>
+
+    <!-- Name Input -->
+    <input type="text" ng-model="user.name" placeholder="Enter your name">
+
+    <!-- Age Input -->
+    <input type="number" ng-model="user.age" placeholder="Enter your age">
+
+    <!-- Live Greeting -->
+    <h2>Hello, {{ user.name || 'Guest' }} 👋</h2>
+
+    <!-- Expression with logic -->
+    <p ng-if="user.age">You are {{ user.age }} years old.</p>
+
+    <!-- Button -->
+    <button ng-click="generateMessage()">Generate Message</button>
+
+    <!-- Dynamic Message -->
+    <p class="message" ng-if="message">{{ message }}</p>
+
+    <!-- Toggle Theme -->
+    <button ng-click="toggleTheme()">🌙 Toggle Theme</button>
+
+    <!-- Theme Status -->
+    <p>Current Theme: {{ theme }}</p>
+
+    <!-- Simple List Feature -->
+    <h3>Add Your Hobbies</h3>
+    <input type="text" ng-model="newHobby" placeholder="Enter hobby">
+    <button ng-click="addHobby()">Add</button>
+
+    <ul>
+        <li ng-repeat="hobby in hobbies track by $index">
+            {{ hobby }}
+        </li>
+    </ul>
+
+</div>
+
+<!-- JS -->
+<script src="app.js"></script>
+
+</body>
+</html>
