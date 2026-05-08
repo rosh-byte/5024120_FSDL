@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: lightgray;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        h2 {
+            color: Green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <table id="productTable">
+        <tr>
+            <th>Product Name</th>
+            <th>Price (₹)</th>
+            <th>Quantity</th>
+            <th>Total (₹)</th>
+        </tr>
+    </table>
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        class Product {
+            constructor(name, price, quantity) {
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+            }
+        }
+
+        let products = [
+            new Product("Laptop", 65000, 1),
+            new Product("Mouse", 800, 2),
+            new Product("Keyboard", 1500, 1),
+            new Product("Headphones", 2500, 2),
+            new Product("USB Cable", 300, 3)
+        ];
+  
+        let table = document.getElementById("productTable");
+
+        for (let p of products) {
+            let row = `
+                <tr>
+                    <td>${p.name}</td>
+                    <td>₹${p.price}</td>
+                    <td>${p.quantity}</td>
+                    <td>₹${p.price * p.quantity}</td>
+                </tr>
+            `;
+            table.innerHTML += row;
+        }
+
+        function calculateTotal() {
+            let total = 0;
+
+            for (let p of products) {
+                total += p.price * p.quantity;
+            }
+
+            let discount = 0;
+
+      
+            if (total > 500) {
+                discount = total * 0.10;
+                total = total - discount;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Discount: ₹" + discount.toFixed(2) +
+                "<br>Final Total: ₹" + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
